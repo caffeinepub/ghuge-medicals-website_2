@@ -1,0 +1,14 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T10:29:57.348Z",
+  "summary": "The diff shows implementation of both requirements. REQ-9 is implemented with a new comprehensive business information section in App.tsx displaying store details, services, and business category. REQ-10 is implemented with updated Google Maps iframe coordinates (17.8805°N, 75.4148°E) matching the specified location. Both features maintain the medical-themed OKLCH color system and existing layout patterns.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.95,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/App.tsx",
+    "project_state.json"
+  ]
+}

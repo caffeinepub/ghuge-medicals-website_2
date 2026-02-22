@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Medical green theme - light mode */
+        --background: 0.98 0 0;
+        --foreground: 0.2 0 0;
+        --card: 1 0 0;
+        --card-foreground: 0.2 0 0;
+        --popover: 1 0 0;
+        --popover-foreground: 0.2 0 0;
+        /* Primary: Deep medical green */
+        --primary: 0.45 0.12 160;
+        --primary-foreground: 0.98 0 0;
+        /* Secondary: Light green tint */
+        --secondary: 0.95 0.02 160;
+        --secondary-foreground: 0.25 0 0;
+        --muted: 0.94 0.01 160;
+        --muted-foreground: 0.5 0 0;
+        /* Accent: Medical blue */
+        --accent: 0.55 0.15 240;
+        --accent-foreground: 0.98 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.98 0 0;
+        --border: 0.88 0.01 160;
+        --input: 0.88 0.01 160;
+        --ring: 0.55 0.12 160;
+        --chart-1: 0.55 0.15 160;
+        --chart-2: 0.6 0.12 200;
+        --chart-3: 0.5 0.1 180;
+        --chart-4: 0.65 0.14 220;
+        --chart-5: 0.6 0.13 140;
+        --sidebar: 0.98 0 0;
+        --sidebar-foreground: 0.2 0 0;
+        --sidebar-primary: 0.45 0.12 160;
+        --sidebar-primary-foreground: 0.98 0 0;
+        --sidebar-accent: 0.95 0.02 160;
+        --sidebar-accent-foreground: 0.25 0 0;
+        --sidebar-border: 0.88 0.01 160;
+        --sidebar-ring: 0.55 0.12 160;
+    }
+
+    .dark {
+        /* Medical green theme - dark mode */
+        --background: 0.15 0 0;
+        --foreground: 0.95 0 0;
+        --card: 0.2 0 0;
+        --card-foreground: 0.95 0 0;
+        --popover: 0.18 0 0;
+        --popover-foreground: 0.95 0 0;
+        /* Primary: Lighter medical green for dark mode */
+        --primary: 0.65 0.12 160;
+        --primary-foreground: 0.15 0 0;
+        --secondary: 0.25 0.02 160;
+        --secondary-foreground: 0.95 0 0;
+        --muted: 0.25 0.01 160;
+        --muted-foreground: 0.65 0 0;
+        /* Accent: Lighter medical blue for dark mode */
+        --accent: 0.65 0.15 220;
+        --accent-foreground: 0.15 0 0;
+        --destructive: 0.65 0.22 27;
+        --destructive-foreground: 0.95 0 0;
+        --border: 0.3 0.01 160;
+        --input: 0.3 0.01 160;
+        --ring: 0.6 0.12 160;
+        --chart-1: 0.65 0.15 160;
+        --chart-2: 0.7 0.12 200;
+        --chart-3: 0.6 0.1 180;
+        --chart-4: 0.75 0.14 220;
+        --chart-5: 0.7 0.13 140;
+        --sidebar: 0.2 0 0;
+        --sidebar-foreground: 0.95 0 0;
+        --sidebar-primary: 0.65 0.12 160;
+        --sidebar-primary-foreground: 0.15 0 0;
+        --sidebar-accent: 0.25 0.02 160;
+        --sidebar-accent-foreground: 0.95 0 0;
+        --sidebar-border: 0.3 0.01 160;
+        --sidebar-ring: 0.6 0.12 160;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}

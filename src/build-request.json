@@ -1,0 +1,64 @@
+{
+  "kind": "build_request",
+  "title": "Add business information section from Google Maps listing",
+  "projectName": "Ghuge Medicals",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-9",
+      "text": "Create a new section below the existing contact information and map that displays detailed business information from the Google Maps listing for Ghuge Medicals at https://maps.app.goo.gl/Py3ZHuvGRmuYgHkw5, including any available descriptions, business category, and location details presented in a visually organized card format",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5",
+          "msg-6"
+        ],
+        "quotes": [
+          "info present on that link",
+          "add info as a new section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new section is added below the map section in App.tsx",
+        "The section displays business information extracted from the Google Maps listing",
+        "Information is presented in an organized, readable format consistent with the medical-themed design",
+        "The section uses the same OKLCH color system and styling as existing sections"
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Update the Google Maps iframe src attribute to use the exact coordinates from the Google Maps link https://maps.app.goo.gl/Py3ZHuvGRmuYgHkw5 to ensure the embedded map displays the precise location of Ghuge Medicals",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5",
+          "msg-6"
+        ],
+        "quotes": [
+          "use this coordinats of link"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The iframe src URL is updated with coordinates matching the Google Maps link location",
+        "The embedded map displays Ghuge Medicals at Choriya Township Bypass Road, Kurduwadi-413208 correctly",
+        "The map marker is positioned at the exact location from the shared link"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the existing sections for business hours, contact information, or address display",
+    "Maintain the professional medical-themed design with green and white color palette",
+    "Keep the new section consistent with the existing layout and styling patterns",
+    "Do not change any files in frontend/src/hooks/ or frontend/src/components/ui"
+  ],
+  "nonGoals": [
+    "Adding interactive features or forms",
+    "Implementing backend functionality",
+    "Adding authentication or user accounts",
+    "Creating multiple pages or navigation"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

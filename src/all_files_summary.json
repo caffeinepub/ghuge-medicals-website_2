@@ -1,0 +1,14 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend canister entry point with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report documenting two implemented features: adding a business information section and updating the Google Maps iframe with precise coordinates for Ghuge Medicals.",
+  "frontend-file-summaries.txt": "JSON summary of frontend files describing the main App component with medical-themed styling, global CSS with OKLCH color system, and Tailwind configuration for healthcare aesthetics.",
+  "frontend/index.css": "Duplicate global CSS file with OKLCH-based color variables for light and dark modes, using neutral grayscale theme (appears to be an older version before medical theme was applied).",
+  "frontend/index.html": "HTML entry point with root div and module script reference to main.tsx for the Ghuge Medicals website.",
+  "frontend/src/App.tsx": "Main React component rendering the Ghuge Medicals website with header, business hours, contact info, embedded Google Maps with coordinates (17.8805°N, 75.4148°E), detailed business information section, about section, and footer.",
+  "frontend/src/hooks/useActor.ts": "React hook managing backend actor creation with Internet Identity authentication, handling both authenticated and anonymous actors with automatic query invalidation on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login/logout state, identity persistence, and AuthClient configuration with idle handling.",
+  "frontend/src/index.css": "Global CSS with medical-themed OKLCH color system featuring green (hue 160) and blue (hue 220-240) accents for both light and dark modes with professional healthcare styling.",
+  "frontend/src/main.tsx": "React application entry point setting up QueryClient, InternetIdentityProvider, and rendering the root App component.",
+  "frontend/tailwind.config.js": "Tailwind configuration with medical-themed OKLCH color tokens, custom container settings, system font stack, extended design tokens including sidebar and chart colors, and animation keyframes.",
+  "project_state.json": "Project state tracking file for Ghuge Medicals website, documenting 9 existing features including homepage, business hours, contact info, location display with embedded map, and medical-themed design. Contains architectural notes about the informational medical provider website structure and map coordinate updates."
+}
