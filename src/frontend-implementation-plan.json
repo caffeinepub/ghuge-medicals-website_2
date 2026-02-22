@@ -1,38 +1,22 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add business information section from Google Maps listing",
+  "title": "Remove embedded Google Maps iframe",
   "requirements": [
     {
-      "id": "REQ-9",
-      "summary": "Create a new business information section below the map displaying details from the Google Maps listing",
+      "id": "REQ-11",
+      "summary": "Remove the embedded Google Maps iframe from the contact section while preserving the text address display",
       "acceptanceCriteria": [
-        "A new section is added below the map section in App.tsx",
-        "The section displays business information extracted from the Google Maps listing",
-        "Information is presented in an organized, readable format consistent with the medical-themed design",
-        "The section uses the same OKLCH color system and styling as existing sections"
+        "The Google Maps iframe element is completely removed from the rendered page",
+        "The address text 'Choriya Township Bypass Road, Kurduvadi-413208' remains visible and properly formatted",
+        "The contact section layout adjusts gracefully without the map component",
+        "No broken references or console errors related to the removed map"
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Add a new business information section below the existing Google Maps section. The section should display business details including business name (Ghuge Medicals), category (Medical supply store), address (Choriya Township Bypass Road, Kurduwadi-413208), and any available description or details. Use card-style layout with consistent styling matching existing sections, utilizing the medical-themed OKLCH color variables (primary, secondary, accent) and maintaining the green and white color palette. Structure the content with proper headings and organized information display."
-        }
-      ]
-    },
-    {
-      "id": "REQ-10",
-      "summary": "Update the Google Maps iframe to use exact coordinates from the provided Google Maps link",
-      "acceptanceCriteria": [
-        "The iframe src URL is updated with coordinates matching the Google Maps link location",
-        "The embedded map displays Ghuge Medicals at Choriya Township Bypass Road, Kurduwadi-413208 correctly",
-        "The map marker is positioned at the exact location from the shared link"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Update the Google Maps iframe src attribute to use the coordinates from https://maps.app.goo.gl/Py3ZHuvGRmuYgHkw5. Extract the latitude and longitude from the Google Maps link and update the iframe embed URL to ensure the map displays the precise location of Ghuge Medicals at Choriya Township Bypass Road, Kurduwadi-413208 with an accurate marker placement."
+          "description": "Remove the Google Maps iframe element from the contact section while keeping the address text 'Choriya Township Bypass Road, Kurduvadi-413208' intact. Adjust the layout structure to ensure the contact section displays properly without the map, maintaining the existing medical-themed styling and ensuring the address remains visible and well-formatted."
         }
       ]
     }

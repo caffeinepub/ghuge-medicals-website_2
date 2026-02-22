@@ -126,35 +126,9 @@ function App() {
               </CardContent>
             </Card>
           </div>
-
-          {/* Map Card */}
-          <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow lg:row-span-2">
-            <CardContent className="p-6 md:p-8">
-              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                <MapPin className="w-6 h-6 text-accent" />
-                Find Us Here
-              </h2>
-              <div className="rounded-lg overflow-hidden border-2 border-border shadow-md">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.5!2d75.4148!3d17.8805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc5d0e8e8e8e8e8%3A0x1234567890abcdef!2sGhuge%20Medicals!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="500"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Ghuge Medicals Location Map"
-                  className="w-full"
-                ></iframe>
-              </div>
-              <p className="text-sm text-muted-foreground mt-4 text-center">
-                Click and drag to explore the map
-              </p>
-            </CardContent>
-          </Card>
         </div>
 
-        {/* Business Details Section - New */}
+        {/* Business Details Section */}
         <Card className="mt-6 md:mt-8 shadow-lg border-2">
           <CardContent className="p-6 md:p-8">
             <div className="flex items-start gap-4 mb-6">

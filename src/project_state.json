@@ -1,12 +1,12 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "Website for Ghuge Medicals - a medical provider serving the taluka region with business information, contact details, and location display",
   "architectural_notes": [
     "Website type: Informational website for medical provider",
-    "Location display: Text + embedded map for Choriya Township Bypass Road, Kurduvadi-413208",
     "New business information section to be added below existing content",
-    "Map coordinates to be updated from provided Google Maps link"
+    "Map coordinates to be updated from provided Google Maps link",
+    "Location display: Text only (embedded map removed per user request)"
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -90,6 +90,14 @@
         "REQ-10"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-remove-the-embedded-google-maps-iframe-from-the-contact-section-in-app-tsx-while-preserving-the-text-address-display-choriya-township-bypass-road-kurduvadi-413208",
+      "title": "Remove the embedded Google Maps iframe from the contact section in App.tsx while preserving the text address display 'Choriya Township Bypass Road, Kurduvadi-413208'",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -126,6 +134,12 @@
     {
       "id": "AR-6",
       "summary": "Update map coordinates to exact location from Google Maps link (https://maps.app.goo.gl/Py3ZHuvGRmuYgHkw5)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Remove embedded Google Maps iframe from website",
       "reqIds": [],
       "status": "pending"
     }

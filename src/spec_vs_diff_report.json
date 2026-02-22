@@ -1,8 +1,8 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T10:29:57.348Z",
-  "summary": "The diff shows implementation of both requirements. REQ-9 is implemented with a new comprehensive business information section in App.tsx displaying store details, services, and business category. REQ-10 is implemented with updated Google Maps iframe coordinates (17.8805°N, 75.4148°E) matching the specified location. Both features maintain the medical-themed OKLCH color system and existing layout patterns.",
+  "generatedAt": "2026-02-22T10:41:11.865Z",
+  "summary": "The diff shows that the Google Maps iframe has been successfully removed from App.tsx. The file summary explicitly states 'Google Maps iframe removed' in parentheses. The address text 'Choriya Township Bypass Road, Kurduvadi-413208' is preserved as indicated by the REQ-4 feature in project_state.json. All other sections (header, business hours, contact information, business details, about section, and footer) remain intact with medical-themed styling preserved.",
   "missing_requirements": [],
   "hallucinated_features": [],
   "confidence": 0.95,
