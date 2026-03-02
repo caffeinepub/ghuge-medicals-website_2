@@ -1,0 +1,5 @@
+{
+  "frontend/src/App.tsx": "Main application component displaying Ghuge Medicals website with header, business hours, contact information, comprehensive business information section with store details and services, about section, and footer with medical-themed styling (Google Maps iframe removed).",
+  "frontend/src/index.css": "Global styles with OKLCH-based medical color system featuring green and blue accents for both light and dark modes, with professional healthcare aesthetic.",
+  "frontend/tailwind.config.js": "Tailwind configuration customized with medical-themed color tokens (greens and blues), system font stack, and extended design tokens for a professional healthcare appearance."
+}

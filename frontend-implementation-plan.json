@@ -1,0 +1,24 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove embedded Google Maps iframe",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Remove the embedded Google Maps iframe from the contact section while preserving the text address display",
+      "acceptanceCriteria": [
+        "The Google Maps iframe element is completely removed from the rendered page",
+        "The address text 'Choriya Township Bypass Road, Kurduvadi-413208' remains visible and properly formatted",
+        "The contact section layout adjusts gracefully without the map component",
+        "No broken references or console errors related to the removed map"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Remove the Google Maps iframe element from the contact section while keeping the address text 'Choriya Township Bypass Road, Kurduvadi-413208' intact. Adjust the layout structure to ensure the contact section displays properly without the map, maintaining the existing medical-themed styling and ensuring the address remains visible and well-formatted."
+        }
+      ]
+    }
+  ]
+}

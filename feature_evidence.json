@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-remove-the-embedded-google-maps-iframe-from-the-contact-section-in-app-tsx-while-preserving-the-text-address-display-choriya-township-bypass-road-kurduvadi-413208",
+      "featureTitle": "Remove the embedded Google Maps iframe from the contact section in App.tsx while preserving the text address display 'Choriya Township Bypass Road, Kurduvadi-413208'",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-11"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

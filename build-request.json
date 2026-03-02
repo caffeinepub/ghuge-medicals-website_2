@@ -1,0 +1,41 @@
+{
+  "kind": "build_request",
+  "title": "Remove embedded Google Maps iframe",
+  "projectName": "Ghuge Medicals",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Remove the embedded Google Maps iframe from the contact section in App.tsx while preserving the text address display 'Choriya Township Bypass Road, Kurduvadi-413208'",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "deleat the map"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Google Maps iframe element is completely removed from the rendered page",
+        "The address text 'Choriya Township Bypass Road, Kurduvadi-413208' remains visible and properly formatted",
+        "The contact section layout adjusts gracefully without the map component",
+        "No broken references or console errors related to the removed map"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify the backend/main.mo file as this is a frontend-only change",
+    "Preserve all other existing sections: header, business hours, contact information, business details, about section, and footer",
+    "Maintain the existing medical-themed styling and color scheme"
+  ],
+  "nonGoals": [
+    "Adding alternative map visualization",
+    "Modifying the address text content or formatting",
+    "Changing any other sections of the website"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
