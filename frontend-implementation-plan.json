@@ -1,22 +1,23 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Remove embedded Google Maps iframe",
+  "title": "Add pharmaceutical company partner logos section",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Remove the embedded Google Maps iframe from the contact section while preserving the text address display",
+      "id": "REQ-1",
+      "summary": "Add 'Our Pharmaceutical Partners' section displaying logo tiles for six pharmaceutical companies using either real logo images or styled fallback tiles",
       "acceptanceCriteria": [
-        "The Google Maps iframe element is completely removed from the rendered page",
-        "The address text 'Choriya Township Bypass Road, Kurduvadi-413208' remains visible and properly formatted",
-        "The contact section layout adjusts gracefully without the map component",
-        "No broken references or console errors related to the removed map"
+        "A clearly labelled 'Our Pharmaceutical Partners' (or similar) section appears on the page",
+        "All six companies are represented: Aqualab, Smartway, Laborate, Cipla, Smartlab, Smart Iconic",
+        "Each entry shows either a real logo image or a clean branded fallback tile with the company name",
+        "The section uses the existing blue and green color scheme and fits visually with the rest of the page",
+        "The section is responsive and displays well on both mobile and desktop"
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Remove the Google Maps iframe element from the contact section while keeping the address text 'Choriya Township Bypass Road, Kurduvadi-413208' intact. Adjust the layout structure to ensure the contact section displays properly without the map, maintaining the existing medical-themed styling and ensuring the address remains visible and well-formatted."
+          "description": "Add a 'Our Pharmaceutical Partners' section after the services section and before the about section. Create a responsive grid layout displaying six pharmaceutical partner entries (Aqualab, Smartway, Laborate, Cipla, Smartlab, Smart Iconic). For each partner, attempt to load a logo image from a reliable public URL; if unavailable or for fallback styling, render a styled tile using the company name with the site's existing medical-themed blue and green color scheme. Ensure the section header matches the existing section styling (Stethoscope icon, gradient text). Use Tailwind classes to ensure responsive behavior across mobile and desktop viewports."
         }
       ]
     }

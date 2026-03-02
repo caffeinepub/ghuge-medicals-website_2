@@ -1,151 +1,27 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
-  "summary": "Website for Ghuge Medicals - a medical provider serving the taluka region with business information, contact details, and location display",
+  "projectStateVersion": 3,
+  "summary": "Informational website for Ghuge Medicals Pharmaceutical Distributors. Single-page site with About Us, mission statement ('To maintain the health of Madha Taluka'), pharmaceutical partner logos (Aqualab, Smartway, Laborate, Cipla, Smartlab, Smart Iconic), and contact details. Blue and green color scheme.",
   "architectural_notes": [
-    "Website type: Informational website for medical provider",
-    "New business information section to be added below existing content",
-    "Map coordinates to be updated from provided Google Maps link",
-    "Location display: Text only (embedded map removed per user request)"
+    "Single informational page (no routing needed) — About Us, Mission, Partner Logos, Contact sections",
+    "Color scheme: friendly blue and green tones",
+    "Pharmaceutical partner logos sourced from network/public URLs; use branded placeholder tiles as fallback"
   ],
   "known_issues": [],
   "isFixRequest": false,
   "existing_features": [
     {
-      "id": "feature-create-a-homepage-displaying-ghuge-medicals-as-the-business-name-with-a-tagline-indicating-they-are-a-medical-provider-serving-the-taluka-region",
-      "title": "Create a homepage displaying 'Ghuge Medicals' as the business name with a tagline indicating they are a medical provider serving the taluka region",
+      "id": "feature-add-a-our-pharmaceutical-partners-section-to-the-existing-ghuge-medicals-website-that-displays-branded-logo-tiles-for-the-following-companies-aqualab-smartway-laborate-cipla-smartlab-and-smart-iconic-use-publicly-available-logo-image-urls-from-the-web-where-possible-where-a-reliable-url-is-unavailable-render-a-styled-branded-tile-with-the-company-name-using-the-site-s-blue-and-green-color-scheme",
+      "title": "Add a 'Our Pharmaceutical Partners' section to the existing Ghuge Medicals website that displays branded logo tiles for the following companies: Aqualab, Smartway, Laborate, Cipla, Smartlab, and Smart Iconic. Use publicly available logo image URLs from the web where possible; where a reliable URL is unavailable, render a styled branded tile with the company name using the site's blue and green color scheme.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-display-business-hours-showing-10-am-to-7-pm-in-a-clearly-visible-section",
-      "title": "Display business hours showing '10 AM to 7 PM' in a clearly visible section",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-contact-information-section-displaying-phone-number-9960093523-and-email-aghuge99-gmail-com-as-clickable-links-tel-and-mailto",
-      "title": "Add contact information section displaying phone number '9960093523' and email 'aghuge99@gmail.com' as clickable links (tel: and mailto:)",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-display-location-choriya-township-bypass-road-kurduvadi-413208-as-formatted-text-in-an-address-section",
-      "title": "Display location 'Choriya Township Bypass Road, Kurduvadi-413208' as formatted text in an address section",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-embed-an-interactive-map-showing-the-location-choriya-township-bypass-road-kurduvadi-413208-using-an-iframe-based-map-service-google-maps-or-openstreetmap",
-      "title": "Embed an interactive map showing the location 'Choriya Township Bypass Road, Kurduvadi-413208' using an iframe-based map service (Google Maps or OpenStreetMap)",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-apply-a-professional-medical-themed-design-with-a-clean-trustworthy-aesthetic-using-a-color-palette-of-greens-and-whites-with-blue-accents-modern-sans-serif-typography-and-a-layout-that-emphasizes-credibility-and-accessibility",
-      "title": "Apply a professional medical-themed design with a clean, trustworthy aesthetic using a color palette of greens and whites with blue accents, modern sans-serif typography, and a layout that emphasizes credibility and accessibility",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-embedded-google-maps-iframe-to-display-the-correct-location-for-ghuge-medicals-choriya-township-bypass-road-kurduwadi-with-accurate-coordinates",
-      "title": "Update the embedded Google Maps iframe to display the correct location for 'Ghuge Medicals, Choriya Township Bypass Road, Kurduwadi' with accurate coordinates",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-google-maps-iframe-embedded-in-app-tsx-to-use-accurate-coordinates-for-ghuge-medicals-choriya-township-bypass-road-kurduwadi-413208-so-the-map-displays-the-correct-town-of-kurduwadi-instead-of-the-wrong-location-currently-shown",
-      "title": "Update the Google Maps iframe embedded in App.tsx to use accurate coordinates for 'Ghuge Medicals, Choriya Township Bypass Road, Kurduwadi-413208' so the map displays the correct town of Kurduwadi instead of the wrong location currently shown",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-new-section-below-the-existing-contact-information-and-map-that-displays-detailed-business-information-from-the-google-maps-listing-for-ghuge-medicals-at-https-maps-app-goo-gl-py3zhuvgrmuyghkw5-including-any-available-descriptions-business-category-and-location-details-presented-in-a-visually-organized-card-format",
-      "title": "Create a new section below the existing contact information and map that displays detailed business information from the Google Maps listing for Ghuge Medicals at https://maps.app.goo.gl/Py3ZHuvGRmuYgHkw5, including any available descriptions, business category, and location details presented in a visually organized card format",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-google-maps-iframe-src-attribute-to-use-the-exact-coordinates-from-the-google-maps-link-https-maps-app-goo-gl-py3zhuvgrmuyghkw5-to-ensure-the-embedded-map-displays-the-precise-location-of-ghuge-medicals",
-      "title": "Update the Google Maps iframe src attribute to use the exact coordinates from the Google Maps link https://maps.app.goo.gl/Py3ZHuvGRmuYgHkw5 to ensure the embedded map displays the precise location of Ghuge Medicals",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-remove-the-embedded-google-maps-iframe-from-the-contact-section-in-app-tsx-while-preserving-the-text-address-display-choriya-township-bypass-road-kurduvadi-413208",
-      "title": "Remove the embedded Google Maps iframe from the contact section in App.tsx while preserving the text address display 'Choriya Township Bypass Road, Kurduvadi-413208'",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Create informational website with business details",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "Display business hours (10 AM to 7 PM)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Add contact information (phone: 9960093523, email: aghuge99@gmail.com)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "Display location with text and interactive map (Choriya Township Bypass Road, Kurduvadi-413208)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-5",
-      "summary": "Extract and display business information from Google Maps link in a new section",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-6",
-      "summary": "Update map coordinates to exact location from Google Maps link (https://maps.app.goo.gl/Py3ZHuvGRmuYgHkw5)",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-7",
-      "summary": "Remove embedded Google Maps iframe from website",
-      "reqIds": [],
-      "status": "pending"
-    }
-  ],
+  "new_feature_requests": [],
   "gameProjectType": "none",
-  "projectName": "Ghuge Medicals Website",
+  "projectName": "Ghuge Medicals Pharmaceutical Distributors",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

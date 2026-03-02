@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-remove-the-embedded-google-maps-iframe-from-the-contact-section-in-app-tsx-while-preserving-the-text-address-display-choriya-township-bypass-road-kurduvadi-413208",
-      "featureTitle": "Remove the embedded Google Maps iframe from the contact section in App.tsx while preserving the text address display 'Choriya Township Bypass Road, Kurduvadi-413208'",
+      "featureId": "feature-add-a-our-pharmaceutical-partners-section-to-the-existing-ghuge-medicals-website-that-displays-branded-logo-tiles-for-the-following-companies-aqualab-smartway-laborate-cipla-smartlab-and-smart-iconic-use-publicly-available-logo-image-urls-from-the-web-where-possible-where-a-reliable-url-is-unavailable-render-a-styled-branded-tile-with-the-company-name-using-the-site-s-blue-and-green-color-scheme",
+      "featureTitle": "Add a 'Our Pharmaceutical Partners' section to the existing Ghuge Medicals website that displays branded logo tiles for the following companies: Aqualab, Smartway, Laborate, Cipla, Smartlab, and Smart Iconic. Use publicly available logo image URLs from the web where possible; where a reliable URL is unavailable, render a styled branded tile with the company name using the site's blue and green color scheme.",
       "files": [
         "frontend/src/App.tsx"
       ],
@@ -15,7 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-11"
+        "REQ-1"
       ],
       "confidence": "high"
     }

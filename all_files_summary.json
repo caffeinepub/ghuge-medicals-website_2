@@ -1,14 +1,14 @@
 {
-  "backend/main.mo": "Empty Motoko actor serving as the backend canister entry point with no implemented functionality.",
-  "feature_evidence.json": "Feature evidence report documenting the removal of Google Maps iframe from the contact section in App.tsx while preserving the text address display.",
-  "frontend-file-summaries.txt": "JSON-formatted summaries of frontend files describing the main App component, global styles with medical color system, and Tailwind configuration.",
-  "frontend/index.css": "Tailwind CSS base styles with OKLCH color variables for light and dark modes using a neutral grayscale palette.",
-  "frontend/index.html": "HTML entry point for the Ghuge Medicals website that loads the React application from main.tsx.",
-  "frontend/src/App.tsx": "Main React component displaying Ghuge Medicals website with header, business hours, contact information, services, about section, and footer with medical-themed styling (Google Maps iframe removed).",
-  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an authenticated or anonymous backend actor using Internet Identity, with automatic query invalidation on identity changes.",
-  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login state, identity storage, and AuthClient lifecycle.",
-  "frontend/src/index.css": "Tailwind CSS base styles with OKLCH color variables defining a medical-themed green and blue color system for light and dark modes.",
-  "frontend/src/main.tsx": "React application entry point that sets up QueryClient, InternetIdentityProvider, and renders the App component.",
-  "frontend/tailwind.config.js": "Tailwind configuration with medical-themed OKLCH color tokens, custom container settings, system font stack, and extended design tokens including animations and shadows.",
-  "project_state.json": "Project state tracking file for Ghuge Medicals website, documenting 11 features including business info display, contact details, location (text-only, map removed), and medical-themed design. Contains architectural notes indicating new business information section to be added and map coordinates updates from Google Maps link."
+  "backend/main.mo": "Empty Motoko actor serving as the backend canister placeholder with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report mapping the 'Our Pharmaceutical Partners' section feature to its implementation in App.tsx with high confidence.",
+  "frontend-file-summaries.txt": "JSON document summarizing the purpose of each frontend source file including App.tsx, index.css, and tailwind.config.js.",
+  "frontend/index.css": "Base Tailwind CSS file defining OKLCH CSS custom properties for a default light/dark color theme without medical-specific customization.",
+  "frontend/index.html": "HTML entry point for the Ghuge Medicals React app, mounting the root div and loading main.tsx as a module.",
+  "frontend/src/App.tsx": "Main React component for the Ghuge Medicals website, rendering the header, business info, contact details, pharmaceutical partners branded tiles, about section, and footer.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor using React Query, recreating it when the Internet Identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Custom React hook and context provider managing Internet Identity authentication state, including login, logout, and identity persistence via AuthClient.",
+  "frontend/src/index.css": "Global CSS with OKLCH-based medical-themed color tokens featuring green and blue accents for both light and dark modes.",
+  "frontend/src/main.tsx": "React app entry point that wraps the App component with QueryClientProvider and InternetIdentityProvider before mounting to the DOM.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the theme with OKLCH-based medical color tokens, system font stack, custom border radii, and animation keyframes.",
+  "project_state.json": "Tracks project state and metadata for the Ghuge Medicals single-page informational website, including architectural notes, color scheme, pharmaceutical partner logo requirements, and existing feature definitions."
 }

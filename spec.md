@@ -1,11 +1,13 @@
 # Specification
 
 ## Summary
-**Goal:** Remove the embedded Google Maps iframe from the contact section while keeping the address text visible.
+**Goal:** Add a "Our Pharmaceutical Partners" section to the Ghuge Medicals website displaying logos or branded tiles for six pharmaceutical companies.
 
 **Planned changes:**
-- Remove the Google Maps iframe element from the contact section in App.tsx
-- Preserve the text address display "Choriya Township Bypass Road, Kurduvadi-413208"
-- Ensure the contact section layout adjusts properly without the map
+- Add a new "Our Pharmaceutical Partners" section to the existing page
+- Display logo tiles for: Aqualab, Smartway, Laborate, Cipla, Smartlab, and Smart Iconic
+- Use publicly available logo image URLs where possible; render styled branded fallback tiles with company names where not
+- Style the section using the existing blue and green color scheme to match the rest of the page
+- Make the section responsive for both mobile and desktop
 
-**User-visible outcome:** The contact section will display only the address text without the embedded map, creating a simpler layout.
+**User-visible outcome:** Visitors to the Ghuge Medicals website will see a new partners section showcasing the logos or branded tiles of six pharmaceutical companies, visually consistent with the rest of the site.
