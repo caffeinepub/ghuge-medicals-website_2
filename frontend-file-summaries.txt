@@ -1,5 +1,5 @@
 {
-  "frontend/src/App.tsx": "Main application component for Ghuge Medicals Pharmaceutical Distributors informational page, featuring header with logo, business hours, contact info, business details, a new \"Our Pharmaceutical Partners\" section with branded tiles for Cipla, Laborate, Aqualab, Smartway, Smartlab, and Smart Iconic, an About section, and a footer with attribution.",
+  "frontend/src/App.tsx": "Main application component for Ghuge Medicals Pharmaceutical Distributors, now displaying the combined partner logos as a single image on a white/light background in the partners section, replacing the previous individual logo grid.",
   "frontend/src/index.css": "Global styles with OKLCH-based medical color system featuring green and blue accents for both light and dark modes, with professional healthcare aesthetic.",
   "frontend/tailwind.config.js": "Tailwind configuration customized with medical-themed color tokens (greens and blues), system font stack, and extended design tokens for a professional healthcare appearance."
 }

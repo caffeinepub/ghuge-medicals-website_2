@@ -1,72 +1,10 @@
-import { MapPin, Phone, Mail, Clock, Building2, Package, Stethoscope } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Building2, Package, Stethoscope, AlertCircle, PhoneCall } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 
-interface PartnerLogoProps {
-  name: string;
-  bgColor: string;
-  textColor: string;
-  accentColor: string;
-  abbr: string;
-}
-
-function PartnerLogo({ name, bgColor, textColor, accentColor, abbr }: PartnerLogoProps) {
-  return (
-    <div
-      className={`flex flex-col items-center justify-center rounded-xl p-5 h-28 shadow-md border-2 transition-transform hover:scale-105 hover:shadow-lg ${bgColor} ${textColor} ${accentColor}`}
-    >
-      <span className="text-2xl font-extrabold tracking-widest leading-none mb-1">{abbr}</span>
-      <span className="text-xs font-semibold text-center leading-tight mt-1 opacity-90">{name}</span>
-    </div>
-  );
-}
-
-const partners: PartnerLogoProps[] = [
-  {
-    name: 'Cipla',
-    abbr: 'CIPLA',
-    bgColor: 'bg-blue-600',
-    textColor: 'text-white',
-    accentColor: 'border-blue-400',
-  },
-  {
-    name: 'Laborate',
-    abbr: 'LAB',
-    bgColor: 'bg-emerald-600',
-    textColor: 'text-white',
-    accentColor: 'border-emerald-400',
-  },
-  {
-    name: 'Aqualab',
-    abbr: 'AQUA',
-    bgColor: 'bg-sky-500',
-    textColor: 'text-white',
-    accentColor: 'border-sky-300',
-  },
-  {
-    name: 'Smartway',
-    abbr: 'SW',
-    bgColor: 'bg-teal-600',
-    textColor: 'text-white',
-    accentColor: 'border-teal-400',
-  },
-  {
-    name: 'Smartlab',
-    abbr: 'SL',
-    bgColor: 'bg-green-600',
-    textColor: 'text-white',
-    accentColor: 'border-green-400',
-  },
-  {
-    name: 'Smart Iconic',
-    abbr: 'SI',
-    bgColor: 'bg-indigo-600',
-    textColor: 'text-white',
-    accentColor: 'border-indigo-400',
-  },
-];
+const PHONE_NUMBER = '9960093523';
 
 function App() {
   const currentYear = new Date().getFullYear();
@@ -109,23 +47,65 @@ function App() {
         <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
           {/* Business Information Card */}
           <div className="space-y-6">
+            {/* Business Hours Card */}
             <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-6 md:p-8">
                 <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                   <Clock className="w-6 h-6 text-accent" />
                   Business Hours
                 </h2>
-                <div className="bg-accent/10 rounded-lg p-6 border-l-4 border-accent">
-                  <p className="text-3xl font-bold text-accent text-center">
-                    10:00 AM - 7:00 PM
-                  </p>
-                  <p className="text-center text-muted-foreground mt-2">
-                    Open Daily
-                  </p>
+
+                {/* Mon–Sat hours */}
+                <div className="bg-accent/10 rounded-lg p-5 border-l-4 border-accent mb-4">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div>
+                      <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-1">
+                        Monday – Saturday
+                      </p>
+                      <p className="text-3xl font-bold text-accent">
+                        10:00 AM – 8:00 PM
+                      </p>
+                    </div>
+                    <Badge className="bg-accent text-accent-foreground text-sm px-3 py-1">
+                      Open
+                    </Badge>
+                  </div>
+                </div>
+
+                {/* Sunday note */}
+                <div className="flex items-start gap-3 bg-warning/10 border border-warning/30 rounded-lg p-4 mb-5">
+                  <AlertCircle className="w-5 h-5 text-warning flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-foreground">
+                      Sunday — Hours Not Fixed
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-0.5">
+                      Sunday availability may vary. Please call ahead to confirm we are open before visiting.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Call Us CTA */}
+                <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4">
+                  <div className="flex-1 text-center sm:text-left">
+                    <p className="font-semibold text-foreground text-base">
+                      Not sure if we're open?
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-0.5">
+                      Give us a call — especially for Sunday availability.
+                    </p>
+                  </div>
+                  <Button asChild size="lg" className="w-full sm:w-auto gap-2 font-bold shadow-md">
+                    <a href={`tel:${PHONE_NUMBER}`}>
+                      <PhoneCall className="w-5 h-5" />
+                      Call Us Now
+                    </a>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
 
+            {/* Contact Information Card */}
             <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow">
               <CardContent className="p-6 md:p-8">
                 <h2 className="text-2xl font-bold text-foreground mb-6">
@@ -137,10 +117,10 @@ function App() {
                     <div className="flex-1">
                       <p className="text-sm text-muted-foreground mb-1">Phone</p>
                       <a
-                        href="tel:9960093523"
+                        href={`tel:${PHONE_NUMBER}`}
                         className="text-lg font-semibold text-foreground hover:text-accent transition-colors"
                       >
-                        9960093523
+                        {PHONE_NUMBER}
                       </a>
                     </div>
                   </div>
@@ -175,7 +155,7 @@ function App() {
 
                 <div className="flex flex-wrap gap-3">
                   <Button asChild className="flex-1 min-w-[140px]">
-                    <a href="tel:9960093523">
+                    <a href={`tel:${PHONE_NUMBER}`}>
                       <Phone className="w-4 h-4 mr-2" />
                       Call Now
                     </a>
@@ -295,8 +275,8 @@ function App() {
         </Card>
 
         {/* Our Pharmaceutical Partners Section */}
-        <Card className="mt-6 md:mt-8 shadow-lg border-2">
-          <CardContent className="p-6 md:p-8">
+        <Card className="mt-6 md:mt-8 shadow-lg border-2 bg-white">
+          <CardContent className="p-4 md:p-6">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-accent/10 rounded-lg">
                 <Stethoscope className="w-7 h-7 text-accent" />
@@ -305,13 +285,15 @@ function App() {
                 Our Pharmaceutical Partners
               </h2>
             </div>
-            <p className="text-muted-foreground mb-6 text-sm">
+            <p className="text-muted-foreground mb-4 text-sm">
               We proudly distribute products from these trusted pharmaceutical companies.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {partners.map((partner) => (
-                <PartnerLogo key={partner.name} {...partner} />
-              ))}
+            <div className="w-full rounded-xl overflow-hidden border border-border/40 bg-white">
+              <img
+                src="/assets/generated/partner-logos-light.dim_1320x860.png"
+                alt="Our pharmaceutical partners: Smartway Wellness, AquaLab, Smart Laboratories, Cipla, Laborate Pharmaceuticals India Ltd."
+                className="w-full h-auto object-contain"
+              />
             </div>
           </CardContent>
         </Card>

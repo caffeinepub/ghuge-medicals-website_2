@@ -1,43 +1,64 @@
 {
   "kind": "build_request",
-  "title": "Add pharmaceutical company partner logos section",
+  "title": "Replace partner logos section with combined image on light background",
   "projectName": "Ghuge Medicals",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Add a 'Our Pharmaceutical Partners' section to the existing Ghuge Medicals website that displays branded logo tiles for the following companies: Aqualab, Smartway, Laborate, Cipla, Smartlab, and Smart Iconic. Use publicly available logo image URLs from the web where possible; where a reliable URL is unavailable, render a styled branded tile with the company name using the site's blue and green color scheme.",
+      "text": "Generate a version of the uploaded logos image (containing Smartway Wellness, AquaLab, Smart Laboratories, Cipla, and Laborate Pharmaceuticals India Ltd.) with a clean white or light neutral background instead of the dark/black background, preserving all logos at full visibility.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-recent"
+          "msg-latest"
         ],
         "quotes": [
-          "Newly just add some logos of medician compnies like aqualab,smartway, laborate, cipla, smartlab, smart iconic etc take their logos from netwirk"
+          "Don't use black background",
+          "Build it"
         ]
       },
       "acceptanceCriteria": [
-        "A clearly labelled 'Our Pharmaceutical Partners' (or similar) section appears on the page",
-        "All six companies are represented: Aqualab, Smartway, Laborate, Cipla, Smartlab, Smart Iconic",
-        "Each entry shows either a real logo image or a clean branded fallback tile with the company name",
-        "The section uses the existing blue and green color scheme and fits visually with the rest of the page",
-        "The section is responsive and displays well on both mobile and desktop"
+        "The logos image displayed on the page does not have a black or dark background",
+        "All 5 logos (Smartway Wellness, AquaLab, Smart Laboratories, Cipla, Laborate Pharmaceuticals) are clearly visible",
+        "The image background is white or a light neutral tone"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "In the pharmaceutical partners section of App.tsx, replace any existing individual logo elements or dark-background image with the new light-background combined logos image saved as a static asset in frontend/public/assets/generated/. Display it in a compact, space-efficient layout with a light/white section background.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Don't use black background",
+          "Build it",
+          "Use this image and replace it to all logs use low space for it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The partners/logos section background is light (white or soft neutral), not black or dark",
+        "The combined logos image is rendered from frontend/public/assets/generated/",
+        "The section is compact and does not take excessive vertical space",
+        "No individual logo components remain; the single combined image replaces them all"
       ]
     }
   ],
   "constraints": [
-    "Do not change the existing page structure, color scheme, or any other sections (About Us, Mission, Contact, Business Hours, Services)",
-    "Do not use Google Maps or any map iframes — the location must remain text-only as per existing implementation",
-    "Do not modify files in frontend/src/hooks/ or frontend/src/main.tsx"
+    "Do not use a black or dark background for the logos section",
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/main.tsx",
+    "Do not modify files listed in frontend.immutablePaths"
   ],
   "nonGoals": [
-    "Adding e-commerce or product catalog functionality",
-    "User authentication or login",
-    "Backend logic or data storage",
-    "Real-time features"
+    "Adding new pages or sections beyond the existing site",
+    "Changing the overall site color theme or typography",
+    "Backend changes"
   ],
   "imageRequirements": {
     "required": [],
-    "edits": []
+    "edits": [
+      "Replace the dark/black background with a clean white or light neutral background, keeping all five logos (Smartway Wellness, AquaLab, Smart Laboratories, Cipla, Laborate Pharmaceuticals India Ltd.) fully visible and well-spaced (file_000000009d34720693b8df539e35b6e1.png > partner-logos-light.dim_1320x860.png)"
+    ]
   }
 }

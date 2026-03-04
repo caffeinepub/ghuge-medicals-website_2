@@ -1,14 +1,14 @@
 {
-  "backend/main.mo": "Empty Motoko actor serving as the backend canister placeholder with no implemented methods.",
-  "feature_evidence.json": "Feature evidence report mapping the 'Our Pharmaceutical Partners' section feature to its implementation in App.tsx with high confidence.",
-  "frontend-file-summaries.txt": "JSON document summarizing the purpose of each frontend source file including App.tsx, index.css, and tailwind.config.js.",
-  "frontend/index.css": "Base Tailwind CSS file defining OKLCH CSS custom properties for a default light/dark color theme without medical-specific customization.",
-  "frontend/index.html": "HTML entry point for the Ghuge Medicals React app, mounting the root div and loading main.tsx as a module.",
-  "frontend/src/App.tsx": "Main React component for the Ghuge Medicals website, rendering the header, business info, contact details, pharmaceutical partners branded tiles, about section, and footer.",
-  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor using React Query, recreating it when the Internet Identity changes.",
-  "frontend/src/hooks/useInternetIdentity.ts": "Custom React hook and context provider managing Internet Identity authentication state, including login, logout, and identity persistence via AuthClient.",
-  "frontend/src/index.css": "Global CSS with OKLCH-based medical-themed color tokens featuring green and blue accents for both light and dark modes.",
+  "backend/main.mo": "Empty Motoko actor serving as the ICP backend canister placeholder with no implemented methods.",
+  "feature_evidence.json": "Feature evidence report mapping two features—generating a light-background logos image and integrating it into App.tsx—to their associated files, components, and test IDs.",
+  "frontend-file-summaries.txt": "JSON document providing short descriptions of the three main frontend source files: App.tsx, index.css, and tailwind.config.js.",
+  "frontend/index.css": "Base Tailwind CSS entry point defining OKLCH CSS custom properties for a neutral light/dark color theme used by shadcn-ui components.",
+  "frontend/index.html": "HTML shell for the Ghuge Medicals React app, mounting the root div and loading the main.tsx module entry point.",
+  "frontend/src/App.tsx": "Main React component for the Ghuge Medicals pharmaceutical distributor site, rendering sections for business hours, contact info, services, and a pharmaceutical partners logo image on a light background.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor using React Query, recreating it when the Internet Identity changes and invalidating dependent queries.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Custom hook and context provider managing Internet Identity authentication state, exposing login/logout functions and status flags via an AuthClient wrapper.",
+  "frontend/src/index.css": "Global CSS with a medical-themed OKLCH color system featuring deep green primary and blue accent tokens for both light and dark modes, plus system font smoothing.",
   "frontend/src/main.tsx": "React app entry point that wraps the App component with QueryClientProvider and InternetIdentityProvider before mounting to the DOM.",
-  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the theme with OKLCH-based medical color tokens, system font stack, custom border radii, and animation keyframes.",
-  "project_state.json": "Tracks project state and metadata for the Ghuge Medicals single-page informational website, including architectural notes, color scheme, pharmaceutical partner logo requirements, and existing feature definitions."
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with OKLCH-based medical color tokens, a system font stack, custom border radii, accordion keyframes, and typography/container-queries plugins.",
+  "project_state.json": "Tracks the state of the 'Ghuge Medicals' website project, describing requirements to display 5 partner logos using a combined light-background image in a compact section of App.tsx. Records existing features, architectural notes, and image editing requirements."
 }

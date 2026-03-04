@@ -1,23 +1,38 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add pharmaceutical company partner logos section",
+  "title": "Replace partner logos section with combined image on light background",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Add 'Our Pharmaceutical Partners' section displaying logo tiles for six pharmaceutical companies using either real logo images or styled fallback tiles",
+      "summary": "Generate a light-background version of the pharmaceutical partners logos image",
       "acceptanceCriteria": [
-        "A clearly labelled 'Our Pharmaceutical Partners' (or similar) section appears on the page",
-        "All six companies are represented: Aqualab, Smartway, Laborate, Cipla, Smartlab, Smart Iconic",
-        "Each entry shows either a real logo image or a clean branded fallback tile with the company name",
-        "The section uses the existing blue and green color scheme and fits visually with the rest of the page",
-        "The section is responsive and displays well on both mobile and desktop"
+        "The logos image displayed on the page does not have a black or dark background",
+        "All 5 logos (Smartway Wellness, AquaLab, Smart Laboratories, Cipla, Laborate Pharmaceuticals) are clearly visible",
+        "The image background is white or a light neutral tone"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/partner-logos-light.dim_1320x860.png",
+          "operation": "create",
+          "description": "Add the generated combined logos image with a clean white or light neutral background, preserving all five partner logos (Smartway Wellness, AquaLab, Smart Laboratories, Cipla, Laborate Pharmaceuticals India Ltd.) at full visibility. This replaces the dark-background version."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Replace individual partner logos with the combined light-background image in a compact layout",
+      "acceptanceCriteria": [
+        "The partners/logos section background is light (white or soft neutral), not black or dark",
+        "The combined logos image is rendered from frontend/public/assets/generated/",
+        "The section is compact and does not take excessive vertical space",
+        "No individual logo components remain; the single combined image replaces them all"
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Add a 'Our Pharmaceutical Partners' section after the services section and before the about section. Create a responsive grid layout displaying six pharmaceutical partner entries (Aqualab, Smartway, Laborate, Cipla, Smartlab, Smart Iconic). For each partner, attempt to load a logo image from a reliable public URL; if unavailable or for fallback styling, render a styled tile using the company name with the site's existing medical-themed blue and green color scheme. Ensure the section header matches the existing section styling (Stethoscope icon, gradient text). Use Tailwind classes to ensure responsive behavior across mobile and desktop viewports."
+          "description": "In the pharmaceutical partners section, replace the existing grid of individual partner logo images with a single img element that displays the combined logos image from frontend/public/assets/generated/partner-logos-light.dim_1320x860.png. Update the section's background to white or a light neutral color. Reduce the section padding and container constraints to create a more compact, space-efficient layout. Remove all individual logo img elements and their surrounding container structures."
         }
       ]
     }
