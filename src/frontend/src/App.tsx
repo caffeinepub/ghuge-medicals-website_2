@@ -241,20 +241,6 @@ function App() {
                     </p>
                   </div>
                 </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
-                    Location Details
-                  </h3>
-                  <div className="bg-accent/10 rounded-lg p-4">
-                    <p className="text-sm text-muted-foreground mb-1">
-                      Coordinates
-                    </p>
-                    <p className="text-foreground font-mono text-sm">
-                      17.8805°N, 75.4148°E
-                    </p>
-                  </div>
-                </div>
               </div>
 
               <div className="space-y-4">
