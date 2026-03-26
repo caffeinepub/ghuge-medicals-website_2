@@ -35,6 +35,18 @@ const partnerLogoImages = [
   },
 ];
 
+function SectionDivider({ label }: { label: string }) {
+  return (
+    <div className="flex items-center gap-4 my-8">
+      <div className="flex-1 h-px bg-border" />
+      <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground px-2">
+        {label}
+      </span>
+      <div className="flex-1 h-px bg-border" />
+    </div>
+  );
+}
+
 function App() {
   const currentYear = new Date().getFullYear();
   const appIdentifier = encodeURIComponent(
@@ -44,19 +56,94 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/20">
       {/* Header */}
-      <header className="relative bg-primary text-primary-foreground shadow-lg overflow-hidden animate-slide-in-right">
-        <div className="absolute inset-0 opacity-10">
-          <img
-            src="/assets/generated/hero-bg.dim_1200x600.png"
-            alt=""
-            className="w-full h-full object-cover"
-          />
+      <header
+        className="relative overflow-hidden shadow-md animate-slide-in-right"
+        style={{
+          background:
+            "linear-gradient(135deg, oklch(0.88 0.07 240) 0%, oklch(0.90 0.07 200) 40%, oklch(0.92 0.06 155) 100%)",
+        }}
+      >
+        {/* Decorative pharmacy pattern overlay */}
+        <div className="absolute inset-0 opacity-8" aria-hidden="true">
+          <svg
+            width="100%"
+            height="100%"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="pharma-pattern"
+                x="0"
+                y="0"
+                width="60"
+                height="60"
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x="26"
+                  y="18"
+                  width="8"
+                  height="24"
+                  rx="2"
+                  fill="oklch(0.50 0.12 220)"
+                />
+                <rect
+                  x="18"
+                  y="26"
+                  width="24"
+                  height="8"
+                  rx="2"
+                  fill="oklch(0.50 0.12 220)"
+                />
+              </pattern>
+              <pattern
+                id="dot-pattern"
+                x="0"
+                y="0"
+                width="30"
+                height="30"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="15" cy="15" r="2" fill="oklch(0.55 0.10 200)" />
+              </pattern>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#dot-pattern)"
+              opacity="0.4"
+            />
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#pharma-pattern)"
+              opacity="0.25"
+            />
+          </svg>
         </div>
-        <div className="container relative z-10 py-8 md:py-12">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
+        {/* Decorative circles */}
+        <div
+          className="absolute -top-10 -right-10 w-48 h-48 rounded-full opacity-15"
+          style={{ background: "oklch(0.75 0.12 155)" }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute -bottom-8 -left-8 w-36 h-36 rounded-full opacity-15"
+          style={{ background: "oklch(0.70 0.12 220)" }}
+          aria-hidden="true"
+        />
+        <div className="container relative z-10 py-10 md:py-14">
+          <h1
+            className="text-3xl md:text-5xl font-bold tracking-tight drop-shadow-sm"
+            style={{ color: "oklch(0.20 0.10 240)" }}
+          >
             Ghuge Medicals Pharmaceutical Distributors
           </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 mt-1">
+          <p
+            className="text-lg md:text-xl mt-2"
+            style={{ color: "oklch(0.35 0.10 220)" }}
+          >
             Serving Madha Taluka
           </p>
         </div>
@@ -64,17 +151,38 @@ function App() {
 
       {/* Main Content */}
       <main className="flex-1 container py-8 md:py-12">
-        {/* Business Hours & Contact — side by side on desktop */}
+        {/* About Section */}
+        <Card className="shadow-lg border-2 animate-slide-in-right-delay-1">
+          <CardContent className="p-6 md:p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              About Ghuge Medicals
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Ghuge Medicals is your trusted pharmaceutical distributor, proudly
+              serving the entire Madha Taluka region.{" "}
+              <span className="font-bold text-primary bg-yellow-100 px-1 rounded">
+                We have nearly 20 years of experience
+              </span>{" "}
+              in providing quality medical supplies and pharmaceutical products
+              to our community. Visit us at our convenient location on Choriya
+              Township Bypass Road, Kurduwadi, or contact us for any inquiries
+              about our services.
+            </p>
+          </CardContent>
+        </Card>
+
+        <SectionDivider label="Get In Touch" />
+
+        {/* Business Hours & Contact */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {/* Business Hours Card */}
-          <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-1">
+          <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-2">
             <CardContent className="p-6 md:p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
                 <Clock className="w-6 h-6 text-accent" />
                 Business Hours
               </h2>
 
-              {/* Mon–Sat hours */}
               <div className="bg-accent/10 rounded-lg p-5 border-l-4 border-accent mb-4">
                 <div className="flex items-center justify-between flex-wrap gap-2">
                   <div>
@@ -91,7 +199,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Sunday note */}
               <div className="flex items-start gap-3 bg-warning/10 border border-warning/30 rounded-lg p-4 mb-5">
                 <AlertCircle className="w-5 h-5 text-warning flex-shrink-0 mt-0.5" />
                 <div>
@@ -105,7 +212,6 @@ function App() {
                 </div>
               </div>
 
-              {/* Call Us CTA */}
               <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4">
                 <div className="flex-1 text-center sm:text-left">
                   <p className="font-semibold text-foreground text-base">
@@ -130,7 +236,7 @@ function App() {
           </Card>
 
           {/* Contact Information Card */}
-          <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-2">
+          <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-3">
             <CardContent className="p-6 md:p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Contact Information
@@ -202,7 +308,7 @@ function App() {
         </div>
 
         {/* Business Details Section */}
-        <Card className="mt-6 md:mt-8 shadow-lg border-2 animate-slide-in-right-delay-3">
+        <Card className="mt-6 md:mt-8 shadow-lg border-2 animate-slide-in-right-delay-4">
           <CardContent className="p-6 md:p-8">
             <div className="flex items-start gap-4 mb-6">
               <div className="p-3 bg-primary/10 rounded-lg">
@@ -298,8 +404,10 @@ function App() {
           </CardContent>
         </Card>
 
+        <SectionDivider label="Our Partners" />
+
         {/* Our Pharmaceutical Partners Section */}
-        <Card className="mt-6 md:mt-8 shadow-lg border-2 bg-white animate-slide-in-right-delay-4">
+        <Card className="shadow-lg border-2 bg-primary/5 animate-slide-in-right-delay-5">
           <CardContent className="p-4 md:p-6">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-accent/10 rounded-lg">
@@ -317,7 +425,7 @@ function App() {
               {partnerLogoImages.map((img) => (
                 <div
                   key={img.src}
-                  className="rounded-xl overflow-hidden border border-border/40 bg-white p-3 flex items-center justify-center"
+                  className="rounded-xl overflow-hidden border border-border/40 bg-white/80 p-3 flex items-center justify-center"
                 >
                   <img
                     src={img.src}
@@ -329,42 +437,34 @@ function App() {
             </div>
           </CardContent>
         </Card>
-
-        {/* About Section */}
-        <Card className="mt-6 md:mt-8 shadow-lg border-2 animate-slide-in-right-delay-5">
-          <CardContent className="p-6 md:p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
-              About Ghuge Medicals
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Ghuge Medicals is your trusted pharmaceutical distributor, proudly
-              serving the entire Madha Taluka region.{" "}
-              <span className="font-bold text-primary bg-yellow-100 px-1 rounded">
-                We have nearly 20 years of experience
-              </span>{" "}
-              in providing quality medical supplies and pharmaceutical products
-              to our community. Our mission is to maintain the health of Madha
-              Taluka. Visit us at our convenient location on Choriya Township
-              Bypass Road, Kurduwadi, or contact us for any inquiries about our
-              services.
-            </p>
-          </CardContent>
-        </Card>
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground mt-auto animate-slide-in-right-delay-6">
+      <footer
+        className="mt-auto animate-slide-in-right-delay-6"
+        style={{
+          background:
+            "linear-gradient(135deg, oklch(0.88 0.07 240) 0%, oklch(0.90 0.07 200) 40%, oklch(0.92 0.06 155) 100%)",
+          borderTop: "1px solid oklch(0.80 0.08 200)",
+        }}
+      >
         <div className="container py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-center md:text-left">
-              <p className="font-semibold">
+              <p
+                className="font-semibold"
+                style={{ color: "oklch(0.22 0.10 240)" }}
+              >
                 Ghuge Medicals Pharmaceutical Distributors
               </p>
-              <p className="text-sm text-primary-foreground/80">
+              <p className="text-sm" style={{ color: "oklch(0.38 0.10 220)" }}>
                 Maintaining the Health of Madha Taluka
               </p>
             </div>
-            <div className="text-center md:text-right text-sm text-primary-foreground/80">
+            <div
+              className="text-center md:text-right text-sm"
+              style={{ color: "oklch(0.38 0.10 220)" }}
+            >
               <p>© {currentYear} Ghuge Medicals. All rights reserved.</p>
               <p className="mt-1">
                 Built with ❤️ using{" "}
@@ -372,7 +472,8 @@ function App() {
                   href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline hover:text-primary-foreground transition-colors"
+                  className="underline hover:opacity-70 transition-opacity"
+                  style={{ color: "oklch(0.30 0.12 240)" }}
                 >
                   caffeine.ai
                 </a>

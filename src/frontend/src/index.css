@@ -25,6 +25,8 @@
     --accent-foreground: 0.98 0 0;
     --destructive: 0.577 0.245 27.325;
     --destructive-foreground: 0.98 0 0;
+    --warning: 0.75 0.18 60;
+    --warning-foreground: 0.2 0 0;
     --border: 0.9 0.01 155;
     --input: 0.9 0.01 155;
     --ring: 0.75 0.12 155;
@@ -63,6 +65,8 @@
     --accent-foreground: 0.15 0 0;
     --destructive: 0.65 0.22 27;
     --destructive-foreground: 0.95 0 0;
+    --warning: 0.8 0.18 60;
+    --warning-foreground: 0.15 0 0;
     --border: 0.3 0.01 155;
     --input: 0.3 0.01 155;
     --ring: 0.75 0.12 155;
@@ -94,7 +98,30 @@
   }
 }
 
+@layer components {
+  .mission-banner {
+    background: linear-gradient(
+      135deg,
+      oklch(0.88 0.1 155) 0%,
+      oklch(0.82 0.12 175) 50%,
+      oklch(0.78 0.1 200) 100%
+    );
+    color: oklch(0.18 0.04 155);
+    border-bottom: 1px solid oklch(0.75 0.1 155 / 0.4);
+  }
+}
+
 @layer utilities {
+  .bg-warning\/10 {
+    background-color: oklch(var(--warning) / 0.1);
+  }
+  .border-warning\/30 {
+    border-color: oklch(var(--warning) / 0.3);
+  }
+  .text-warning {
+    color: oklch(var(--warning));
+  }
+
   @keyframes slide-in-right {
     from {
       opacity: 0;
