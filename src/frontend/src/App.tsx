@@ -20,18 +20,22 @@ const partnerLogoImages = [
   {
     src: "/assets/uploads/Gemini_Generated_Image_6dq8o86dq8o86dq8-1.png",
     alt: "Cipla and AquaLab pharmaceutical logos",
+    label: "Cipla · AquaLab",
   },
   {
     src: "/assets/uploads/Gemini_Generated_Image_wpwc27wpwc27wpwc-2.png",
     alt: "Torque, Troikaa, Ind-Swift, Abbott, Emcure, Alkem, Lupin, Smartway, Smart Laboratories, Laborate logos",
+    label: "Abbott · Alkem · Lupin & more",
   },
   {
     src: "/assets/uploads/Gemini_Generated_Image_ub44mdub44mdub44-3.png",
     alt: "Himalaya, Intas, Mankind, Eris, Universal, Aristo, Torrent Pharma, Wings Novitas, Cadila, JB logos",
+    label: "Himalaya · Mankind · Torrent & more",
   },
   {
     src: "/assets/uploads/Gemini_Generated_Image_o15n4no15n4no15n-5.png",
     alt: "HMD, Saiee, AllOES, Flo-Rite, Hetero Healthcare, Sapat Elder, Leeford, Alembic, Glenmark logos",
+    label: "Alembic · Glenmark · Hetero & more",
   },
 ];
 
@@ -408,7 +412,7 @@ function App() {
 
         {/* Our Pharmaceutical Partners Section */}
         <Card className="shadow-lg border-2 bg-primary/5 animate-slide-in-right-delay-5">
-          <CardContent className="p-4 md:p-6">
+          <CardContent className="p-4 md:p-8">
             <div className="flex items-center gap-3 mb-2">
               <div className="p-2 bg-accent/10 rounded-lg">
                 <Stethoscope className="w-7 h-7 text-accent" />
@@ -417,21 +421,27 @@ function App() {
                 Our Pharmaceutical Partners
               </h2>
             </div>
-            <p className="text-muted-foreground mb-4 text-sm">
+            <p className="text-muted-foreground mb-6 text-sm">
               We proudly distribute products from these trusted pharmaceutical
               companies.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {partnerLogoImages.map((img) => (
                 <div
                   key={img.src}
-                  className="rounded-xl overflow-hidden border border-border/40 bg-white/80 p-3 flex items-center justify-center"
+                  className="rounded-2xl overflow-hidden border border-primary/20 bg-white shadow-md hover:scale-105 hover:shadow-xl transition-all duration-200 p-4 flex flex-col items-center justify-center gap-3"
+                  style={{ background: "oklch(0.99 0.01 155)" }}
                 >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-auto object-contain max-h-56"
-                  />
+                  <div className="w-full h-48 flex items-center justify-center">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <p className="text-xs font-semibold text-center text-muted-foreground tracking-wide uppercase">
+                    {img.label}
+                  </p>
                 </div>
               ))}
             </div>
