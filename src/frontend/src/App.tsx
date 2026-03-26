@@ -64,147 +64,141 @@ function App() {
 
       {/* Main Content */}
       <main className="flex-1 container py-8 md:py-12">
-        <div className="grid gap-6 md:gap-8 lg:grid-cols-2">
-          {/* Business Information Card */}
-          <div className="space-y-6">
-            {/* Business Hours Card */}
-            <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-1">
-              <CardContent className="p-6 md:p-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <Clock className="w-6 h-6 text-accent" />
-                  Business Hours
-                </h2>
+        {/* Business Hours & Contact — side by side on desktop */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+          {/* Business Hours Card */}
+          <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-1">
+            <CardContent className="p-6 md:p-8">
+              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                <Clock className="w-6 h-6 text-accent" />
+                Business Hours
+              </h2>
 
-                {/* Mon–Sat hours */}
-                <div className="bg-accent/10 rounded-lg p-5 border-l-4 border-accent mb-4">
-                  <div className="flex items-center justify-between flex-wrap gap-2">
-                    <div>
-                      <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-1">
-                        Monday – Saturday
-                      </p>
-                      <p className="text-3xl font-bold text-accent">
-                        10:00 AM – 8:00 PM
-                      </p>
-                    </div>
-                    <Badge className="bg-accent text-accent-foreground text-sm px-3 py-1">
-                      Open
-                    </Badge>
-                  </div>
-                </div>
-
-                {/* Sunday note */}
-                <div className="flex items-start gap-3 bg-warning/10 border border-warning/30 rounded-lg p-4 mb-5">
-                  <AlertCircle className="w-5 h-5 text-warning flex-shrink-0 mt-0.5" />
+              {/* Mon–Sat hours */}
+              <div className="bg-accent/10 rounded-lg p-5 border-l-4 border-accent mb-4">
+                <div className="flex items-center justify-between flex-wrap gap-2">
                   <div>
-                    <p className="font-semibold text-foreground">
-                      Sunday — Hours Not Fixed
+                    <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-1">
+                      Monday – Saturday
                     </p>
-                    <p className="text-sm text-muted-foreground mt-0.5">
-                      Sunday availability may vary. Please call ahead to confirm
-                      we are open before visiting.
+                    <p className="text-3xl font-bold text-accent">
+                      10:00 AM – 8:00 PM
                     </p>
                   </div>
+                  <Badge className="bg-accent text-accent-foreground text-sm px-3 py-1">
+                    Open
+                  </Badge>
                 </div>
+              </div>
 
-                {/* Call Us CTA */}
-                <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4">
-                  <div className="flex-1 text-center sm:text-left">
-                    <p className="font-semibold text-foreground text-base">
-                      Not sure if we're open?
-                    </p>
-                    <p className="text-sm text-muted-foreground mt-0.5">
-                      Give us a call — especially for Sunday availability.
-                    </p>
-                  </div>
-                  <Button
-                    asChild
-                    size="lg"
-                    className="w-full sm:w-auto gap-2 font-bold shadow-md"
-                  >
-                    <a href={`tel:${PHONE_NUMBER}`}>
-                      <PhoneCall className="w-5 h-5" />
-                      Call Us Now
+              {/* Sunday note */}
+              <div className="flex items-start gap-3 bg-warning/10 border border-warning/30 rounded-lg p-4 mb-5">
+                <AlertCircle className="w-5 h-5 text-warning flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="font-semibold text-foreground">
+                    Sunday — Hours Not Fixed
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-0.5">
+                    Sunday availability may vary. Please call ahead to confirm
+                    we are open before visiting.
+                  </p>
+                </div>
+              </div>
+
+              {/* Call Us CTA */}
+              <div className="bg-primary/5 border border-primary/20 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4">
+                <div className="flex-1 text-center sm:text-left">
+                  <p className="font-semibold text-foreground text-base">
+                    Not sure if we're open?
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-0.5">
+                    Give us a call — especially for Sunday availability.
+                  </p>
+                </div>
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full sm:w-auto gap-2 font-bold shadow-md"
+                >
+                  <a href={`tel:${PHONE_NUMBER}`}>
+                    <PhoneCall className="w-5 h-5" />
+                    Call Us Now
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Contact Information Card */}
+          <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-2">
+            <CardContent className="p-6 md:p-8">
+              <h2 className="text-2xl font-bold text-foreground mb-6">
+                Contact Information
+              </h2>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+                  <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground mb-1">Phone</p>
+                    <a
+                      href={`tel:${PHONE_NUMBER}`}
+                      className="text-lg font-semibold text-foreground hover:text-accent transition-colors"
+                    >
+                      {PHONE_NUMBER}
                     </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Contact Information Card */}
-            <Card className="shadow-lg border-2 hover:shadow-xl transition-shadow animate-slide-in-right-delay-2">
-              <CardContent className="p-6 md:p-8">
-                <h2 className="text-2xl font-bold text-foreground mb-6">
-                  Contact Information
-                </h2>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <Phone className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <div className="flex-1">
-                      <p className="text-sm text-muted-foreground mb-1">
-                        Phone
-                      </p>
-                      <a
-                        href={`tel:${PHONE_NUMBER}`}
-                        className="text-lg font-semibold text-foreground hover:text-accent transition-colors"
-                      >
-                        {PHONE_NUMBER}
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <Mail className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <div className="flex-1">
-                      <p className="text-sm text-muted-foreground mb-1">
-                        Email
-                      </p>
-                      <a
-                        href="mailto:aghuge99@gmail.com"
-                        className="text-lg font-semibold text-foreground hover:text-accent transition-colors break-all"
-                      >
-                        aghuge99@gmail.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
-                    <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
-                    <div className="flex-1">
-                      <p className="text-sm text-muted-foreground mb-1">
-                        Location
-                      </p>
-                      <p className="text-lg font-semibold text-foreground">
-                        Choriya Township Bypass Road
-                        <br />
-                        Kurduvadi - 413208
-                      </p>
-                    </div>
                   </div>
                 </div>
 
-                <Separator className="my-6" />
-
-                <div className="flex flex-wrap gap-3">
-                  <Button asChild className="flex-1 min-w-[140px]">
-                    <a href={`tel:${PHONE_NUMBER}`}>
-                      <Phone className="w-4 h-4 mr-2" />
-                      Call Now
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+                  <Mail className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground mb-1">Email</p>
+                    <a
+                      href="mailto:aghuge99@gmail.com"
+                      className="text-lg font-semibold text-foreground hover:text-accent transition-colors break-all"
+                    >
+                      aghuge99@gmail.com
                     </a>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="flex-1 min-w-[140px]"
-                  >
-                    <a href="mailto:aghuge99@gmail.com">
-                      <Mail className="w-4 h-4 mr-2" />
-                      Email Us
-                    </a>
-                  </Button>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors">
+                  <MapPin className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
+                  <div className="flex-1">
+                    <p className="text-sm text-muted-foreground mb-1">
+                      Location
+                    </p>
+                    <p className="text-lg font-semibold text-foreground">
+                      Choriya Township Bypass Road
+                      <br />
+                      Kurduvadi - 413208
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <Separator className="my-6" />
+
+              <div className="flex flex-wrap gap-3">
+                <Button asChild className="flex-1 min-w-[140px]">
+                  <a href={`tel:${PHONE_NUMBER}`}>
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="flex-1 min-w-[140px]"
+                >
+                  <a href="mailto:aghuge99@gmail.com">
+                    <Mail className="w-4 h-4 mr-2" />
+                    Email Us
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Business Details Section */}
